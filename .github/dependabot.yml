@@ -1,0 +1,19 @@
+version: 2
+updates:
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+    groups:
+      nest:
+        patterns:
+          - '@nestjs/*'
+        update-types:
+          - 'major'
+      upgrades:
+        patterns:
+          - '*'
+        update-types:
+          - 'patch'
+          - 'minor'
+  
